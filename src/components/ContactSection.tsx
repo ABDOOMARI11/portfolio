@@ -1,8 +1,8 @@
-
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";  // Import EmailJS
 
 export function ContactSection() {
   const { toast } = useToast();
@@ -11,23 +11,36 @@ export function ContactSection() {
     email: "",
     message: "",
   });
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real app, you would connect this to an API
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+
+    const serviceId = "service_jmlojol";  // Your EmailJS service ID
+    const templateId = "template_2kb0cqa";  // Replace with your EmailJS template ID
+    const publicKey = "UY0q1RQoQ9FN7FtzJ";  // Replace with your EmailJS public key
+
+    try {
+      await emailjs.send(serviceId, templateId, formData, publicKey);
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
-  
+
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
@@ -39,7 +52,7 @@ export function ContactSection() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="section-title">Contact Me</h2>
-          
+
           <div className="grid md:grid-cols-5 gap-10">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -49,20 +62,20 @@ export function ContactSection() {
               className="md:col-span-2 space-y-6"
             >
               <p>Feel free to reach out to me through any of these channels or by using the contact form.</p>
-              
+
               <div className="space-y-4 pt-4">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
                   </div>
-                  <div>
+                  <div className="">
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:abdelmoughithelaoumari@gmail.com" className="font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors">
+                    <a href="mailto:abdelmoughithelaoumari@gmail.com" className="font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors ">
                       abdelmoughithelaoumari@gmail.com
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Linkedin className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
@@ -74,7 +87,7 @@ export function ContactSection() {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Github className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
@@ -88,13 +101,13 @@ export function ContactSection() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
-              className="md:col-span-3"
+              className="md:col-span-3 gap-4"
             >
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -112,7 +125,7 @@ export function ContactSection() {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1">
                     Email
@@ -128,7 +141,7 @@ export function ContactSection() {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1">
                     Message
@@ -144,7 +157,7 @@ export function ContactSection() {
                     required
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
                   className="px-6 py-3 bg-morocco-blue text-white dark:bg-morocco-gold dark:text-morocco-dark rounded-md font-medium hover:bg-opacity-90 transition-all w-full"

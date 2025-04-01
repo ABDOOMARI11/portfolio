@@ -6,9 +6,9 @@ export function SkillsSection() {
     {
       name: "Languages",
       skills: [
-        { name: "Arabe", level: "courant" },
-        { name: "Français", level: "B2" },
-        { name: "Anglais", level: "B1" }
+        { name: "Arabic", level: "fluent" },
+        { name: "French", level: "B2" },
+        { name: "English", level: "B2" }
       ]
     },
     {
@@ -17,13 +17,15 @@ export function SkillsSection() {
         { name: "C", level: "Intermediate" },
         { name: "C++", level: "Intermediate" },
         { name: "Java", level: "Intermediate" },
-        { name: "JavaScript", level: "Advanced" },
+        { name: "JavaScript", level: "Intermediate" },
         { name: "PHP", level: "Advanced" }
       ]
     },
     {
       name: "Server Side",
       skills: [
+        { name: "JAVA", level: "Intermediate" },
+        { name: "Spring Boot", level: "Intermediate" },
         { name: "PHP", level: "Advanced" },
         { name: "Laravel", level: "Advanced" }
       ]
@@ -49,7 +51,7 @@ export function SkillsSection() {
       name: "Methods & Concepts",
       skills: [
         { name: "OOP", level: "Advanced" },
-        { name: "Merise2", level: "Intermediate" },
+        { name: "Merise2", level: "Advanced" },
         { name: "UML", level: "Intermediate" }
       ]
     },
@@ -64,9 +66,9 @@ export function SkillsSection() {
     {
       name: "Hobbies",
       skills: [
-        { name: "Lecture", level: "" },
-        { name: "Musique", level: "" },
-        { name: "Sport (handball)", level: "" }
+        { name: "Reading", level: "" },
+        { name: "Music", level: "" },
+        { name: "Sports (handball)", level: "" }
       ]
     }
   ];

@@ -79,7 +79,7 @@ export function Header() {
             <a href="https://github.com/ABDOOMARI11" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 text-morocco-dark dark:text-morocco-beige hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors" />
             </a>
-            <a href="https://www.linkedin.com/in/abdelmoughith-el-aoumari" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/abdelmoughith-el-aoumari-764238242/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5 text-morocco-dark dark:text-morocco-beige hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors" />
             </a>
             <a href="mailto:abdelmoughithelaoumari@gmail.com">

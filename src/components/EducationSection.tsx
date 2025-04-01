@@ -4,30 +4,31 @@ import { motion } from "framer-motion";
 export function EducationSection() {
   const educationData = [
     {
-      institution: "Faculté des Sciences Semlalia de Marrakech",
-      degree: "Master",
-      field: "Ingénierie des Systèmes d'information",
-      period: "En cours",
+      institution: "Faculty of Sciences Semlalia of Marrakech",
+      degree: "Master’s",
+      field: "Information Systems Engineering",
+      period: "Ongoing",
     },
     {
-      institution: "École Supérieure de Technologie de SAFI",
-      degree: "Licence Professionnelle",
-      field: "Ingénierie des Systèmes d'information et Réseaux",
-      period: "Oct 2023 - Juin 2024",
+      institution: "Higher School of Technology of Safi",
+      degree: "Professional Bachelor's",
+      field: "Information Systems and Networks Engineering",
+      period: "Oct 2023 - June 2024",
     },
     {
-      institution: "École Supérieure de Technologie de SAFI",
-      degree: "DUT Génie Informatique",
-      field: "Option : Administration des systèmes réseaux",
-      period: "Sep. 2021 - Juin 2023",
+      institution: "Higher School of Technology of Safi",
+      degree: "University Diploma of Technology (DUT) in Computer Science",
+      field: "Option: Systems and Network Administration",
+      period: "Sep 2021 - June 2023",
     },
     {
-      institution: "Faculté des Science et Techniques de Béni-Mellal",
-      degree: "1er Année filière",
-      field: "Mathématique-Informatique-Physique-Chimie",
-      period: "Sep. 2020 - Juin 2021",
+      institution: "Faculty of Science and Technology of Béni-Mellal",
+      degree: "1st Year Program",
+      field: "Mathematics - Computer Science - Physics - Chemistry",
+      period: "Sep 2020 - June 2021",
     }
   ];
+  
   
   const containerVariants = {
     hidden: { opacity: 0 },

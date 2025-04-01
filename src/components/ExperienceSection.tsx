@@ -5,29 +5,30 @@ export function ExperienceSection() {
   const experienceData = [
     {
       company: "Mediaverse",
-      position: "Stage de Fin d'année",
-      period: "Avr 2024 - Juin 2024",
-      description: "Réaliser un système d'apprentissage en ligne et de gestion des cours \"DAcademy\" en utilisant Laravel pour le back-end et ReactJS pour le front-end et MongoDB comme base de données."
+      position: "End-of-Year Internship",
+      period: "Apr 2024 - June 2024",
+      description: "Developed an online learning and course management system, 'DAcademy,' using Laravel for the back-end, ReactJS for the front-end, and MongoDB as the database."
     },
     {
-      company: "Province REHAMNA",
-      position: "Stage de Fin d'études",
-      period: "Avr 2023 - Juin 2023",
-      description: "Réaliser une plateforme web de gestion des ressources humaines pour la province de Rehamna en utilisant Bootstrap pour le front-end et Laravel pour le back-end."
+      company: "Province of Rehamna",
+      position: "Final-Year Internship",
+      period: "Apr 2023 - June 2023",
+      description: "Developed a web platform for human resource management for the province of Rehamna using Bootstrap for the front-end and Laravel for the back-end."
     },
     {
-      company: "EST SAFI",
-      position: "Projet de Fin d'études",
-      period: "Déc 2022 - Juin 2023",
-      description: "Réaliser une plateforme web pour la digitalisation de la gestion des affaires intérieures de l'établissement DAR-TIFL en utilisant React JS et Tailwind CSS pour le front-end, et Laravel pour le back-end."
+      company: "EST Safi",
+      position: "Final-Year Project",
+      period: "Dec 2022 - June 2023",
+      description: "Developed a web platform for digitizing the internal affairs management of the DAR-TIFL institution using React JS and Tailwind CSS for the front-end, and Laravel for the back-end."
     },
     {
-      company: "Institut Spécialisé des Arts Traditionnels",
-      position: "Stage d'initiation",
-      period: "Juil. 2022 - Aout. 2022",
-      description: "Réaliser une application web de gestion de stock pour l'institut en utilisant HTML, CSS, Bootstrap pour le front-end et PHP pour le back-end."
+      company: "Specialized Institute of Traditional Arts",
+      position: "Initiation Internship",
+      period: "July 2022 - Aug 2022",
+      description: "Developed a web application for inventory management for the institute using HTML, CSS, and Bootstrap for the front-end, and PHP for the back-end."
     }
   ];
+  
   
   const containerVariants = {
     hidden: { opacity: 0 },

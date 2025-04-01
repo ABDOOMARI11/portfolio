@@ -56,7 +56,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-lg mb-8 text-muted-foreground max-w-lg"
             >
-              Full-stack developer specializing in React.js, Next.js, Laravel, PHP, and modern web technologies.
+              Full-stack developer specializing in React.js, Next.js,Spring Boot, JAVA, Laravel, PHP, and modern web technologies.
             </motion.p>
             <motion.div variants={itemVariants} className="flex gap-4">
               <a 
@@ -87,7 +87,7 @@ export function HeroSection() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-morocco-blue dark:border-morocco-gold">
               <img 
-                src="/lovable-uploads/8baff5af-d089-49db-be2b-20082654af5f.png" 
+                src="/lovable-uploads/photo.jpg" 
                 alt="Abdelmoughith El Aoumari" 
                 className="w-full h-full object-cover"
               />
