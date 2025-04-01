@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
@@ -31,7 +30,7 @@ export function Header() {
     }
   };
   
-  const sections = ["home", "about", "education", "experience", "skills", "contact"];
+  const sections = ["home", "about", "education", "experience", "skills", "projects", "contact"];
   
   return (
     <motion.header 
