@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Portfolio Abdelmoughith El Aoumari
 
-## Project info
+## 🌟 Aperçu
+Ce dépôt contient le code source de mon portfolio personnel, présentant mes compétences, projets et expériences en tant que développeur Full-stack spécialisé en ReactJS, Node.js et Spring Boot.
 
-**URL**: https://lovable.dev/projects/d49716d3-5f5c-4b25-aa8c-fc0e39ec1055
+Portfolio en ligne : [https://portfolio-abdelmoughith-abdoomari11s-projects.vercel.app/](https://portfolio-abdelmoughith-abdoomari11s-projects.vercel.app/)
 
-## How can I edit this code?
+## 📋 Fonctionnalités
+- Design responsive et moderne avec thème sombre
+- Présentation complète de mon parcours académique
+- Section détaillée sur mon expérience professionnelle
+- Vitrine de mes projets avec descriptions et technologies utilisées
+- Liste de mes compétences techniques
+- Formulaire de contact fonctionnel
+- Animation et transitions fluides
 
-There are several ways of editing your application.
+## 🛠️ Technologies utilisées
+- **Frontend**: ReactJS, HTML5, CSS3, JavaScript
+- **Style**: CSS personnalisé avec animations
+- **Déploiement**: Vercel
+- **Contrôle de version**: Git & GitHub
 
-**Use Lovable**
+## 🚀 Installation et exécution locale
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d49716d3-5f5c-4b25-aa8c-fc0e39ec1055) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Cloner le dépôt
+```bash
+git clone https://github.com/votre-username/portfolio.git
+cd portfolio
 ```
 
-**Edit a file directly in GitHub**
+2. Installer les dépendances
+```bash
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Démarrer le serveur de développement
+```bash
+npm start
+```
 
-**Use GitHub Codespaces**
+4. Ouvrir http://localhost:3000 dans votre navigateur
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📂 Structure du projet
+```
+portfolio/
+├── public/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   └── index.html
+├── src/
+│   ├── components/
+│   ├── sections/
+│   ├── styles/
+│   ├── App.js
+│   └── index.js
+└── package.json
+```
 
-## What technologies are used for this project?
+## 📱 Responsivité
+Le portfolio est entièrement responsive et optimisé pour tous les appareils, des téléphones mobiles aux écrans larges.
 
-This project is built with .
+## 💼 Projets présentés
+- Studyway - Plateforme d'apprentissage en ligne
+- Human Resources Management Platform
+- DigiTik - Système de gestion des affaires VS
+- Stock Management Web Application
+- World Cup 2030 Fan ID System
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📚 Éducation et formations
+- Faculté des Sciences et Technologies de Beni Mellal
+- Higher School of Technology of Safi (Spécialisation en Computer Engineering)
 
-## How can I deploy this project?
+## 📝 Personnalisation
+Pour personnaliser ce portfolio pour votre propre usage :
+1. Mettez à jour les informations personnelles dans les fichiers de données
+2. Remplacez les images et les informations de projet
+3. Adaptez les styles selon vos préférences
 
-Simply open [Lovable](https://lovable.dev/projects/d49716d3-5f5c-4b25-aa8c-fc0e39ec1055) and click on Share -> Publish.
+## 📞 Contact
+N'hésitez pas à me contacter si vous avez des questions ou des suggestions d'amélioration.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📄 Licence
+Ce projet est sous licence MIT.
