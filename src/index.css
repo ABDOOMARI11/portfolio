@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,58 +38,52 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 222.2 47.4% 11.2%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 216 34% 17%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 215 20.2% 65.1%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 216 34% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 216 34% 17%;
+    --sidebar-ring: 212.7 26.8% 83.9%;
   }
 }
 
@@ -96,6 +93,71 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  .pattern-overlay {
+    background-color: rgba(255,255,255,0.03);
+    background-image: 
+      radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+  
+  .dark .pattern-overlay {
+    background-color: rgba(0,0,0,0.03);
+    background-image: 
+      radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+      radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  }
+
+  .morocco-decoration {
+    position: relative;
+  }
+
+  .morocco-decoration::before, 
+  .morocco-decoration::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l border-muted;
+  }
+
+  .timeline-item::before {
+    @apply content-[''] absolute w-4 h-4 bg-morocco-blue dark:bg-morocco-gold rounded-full -left-2 mt-1;
+  }
+
+  .timeline-item:last-child {
+    @apply border-0 pb-0;
+  }
+
+  .section-title {
+    @apply relative inline-block text-2xl font-bold mb-6;
+  }
+  
+  .section-title::after {
+    @apply content-[''] block h-1 w-2/3 bg-morocco-blue dark:bg-morocco-gold mt-1;
+  }
+
+  .skill-badge {
+    @apply px-3 py-1 rounded-full text-sm bg-morocco-beige text-morocco-dark dark:bg-morocco-blue dark:text-white inline-flex items-center gap-1;
+  }
+
+  .theme-toggle {
+    @apply p-2 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors;
   }
 }

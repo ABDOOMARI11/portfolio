@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +66,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				morocco: {
+					blue: '#235789',
+					gold: '#F1A208',
+					orange: '#DB7C26',
+					beige: '#F3D9B1',
+					dark: '#121619'
 				}
 			},
 			borderRadius: {
@@ -69,26 +81,41 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+				"fade-in": {
+					"0%": { opacity: "0", transform: "translateY(10px)" },
+					"100%": { opacity: "1", transform: "translateY(0)" }
+				},
+				"fade-out": {
+					"0%": { opacity: "1", transform: "translateY(0)" },
+					"100%": { opacity: "0", transform: "translateY(10px)" }
+				},
+				"slide-in": {
+					"0%": { transform: "translateX(-100%)", opacity: "0" },
+					"100%": { transform: "translateX(0)", opacity: "1" }
+				},
+				"scale-up": {
+					"0%": { transform: "scale(0.8)", opacity: "0" },
+					"100%": { transform: "scale(1)", opacity: "1" }
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"fade-in": "fade-in 0.5s ease-out forwards",
+				"fade-out": "fade-out 0.3s ease-out",
+				"slide-in": "slide-in 0.5s ease-out forwards",
+				"scale-up": "scale-up 0.4s ease-out forwards",
+			},
+			backgroundImage: {
+				'morocco-pattern': "url('/public/lovable-uploads/73fa10c8-8c85-41a3-b5e0-5ed5ab4d61a5.png')"
 			}
 		}
 	},
