@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 export function AboutSection() {
@@ -19,17 +18,17 @@ export function AboutSection() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-4 gap-6"
+            className="grid md:grid-cols-4 gap-4"
           >
             <div className="md:col-span-1">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-y-2"> 
                 <div className="text-center md:text-left">
                   <p className="text-sm text-muted-foreground">Location</p>
                   <p className="font-medium">Marrakech, Morocco</p>
                 </div>
                 <div className="text-center md:text-left">
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:abdelmoughithelaoumari@gmail.com" className="font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors">
+                  <a href="mailto:abdelmoughithelaoumari@gmail.com" className="font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors break-words">
                     abdelmoughithelaoumari@gmail.com
                   </a>
                 </div>
@@ -62,10 +61,10 @@ export function AboutSection() {
               </p>
               
               <div className="flex flex-wrap gap-3 pt-3">
-                <span className="skill-badge">HTML/CSS</span>
+                <span className="skill-badge">JAVA</span>
+                <span className="skill-badge">Spring Boot</span>
                 <span className="skill-badge">React</span>
                 <span className="skill-badge">Next.js</span>
-                <span className="skill-badge">Tailwind CSS</span>
                 <span className="skill-badge">Laravel</span>
                 <span className="skill-badge">PHP</span>
               </div>

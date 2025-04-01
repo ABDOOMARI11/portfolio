@@ -53,17 +53,19 @@ export function ContactSection() {
         >
           <h2 className="section-title">Contact Me</h2>
 
-          <div className="grid md:grid-cols-5 gap-10">
+          <div className="flex gap-10">  {/* Utilisation de flex avec un espace entre les divs */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               viewport={{ once: true }}
-              className="md:col-span-2 space-y-6"
+              className="flex-1 space-y-6"
             >
+              {/* Contact Info Section */}
               <p>Feel free to reach out to me through any of these channels or by using the contact form.</p>
 
               <div className="space-y-4 pt-4">
+                {/* Email */}
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
@@ -76,6 +78,7 @@ export function ContactSection() {
                   </div>
                 </div>
 
+                {/* LinkedIn */}
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Linkedin className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
@@ -83,11 +86,12 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm text-muted-foreground">LinkedIn</p>
                     <a href="https://www.linkedin.com/in/abdelmoughith-el-aoumari" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors">
-                      abdelmoughith-el-aoumari
+                      abdelmoughithelaoumari
                     </a>
                   </div>
                 </div>
 
+                {/* GitHub */}
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-morocco-blue/10 dark:bg-morocco-gold/10 flex items-center justify-center">
                     <Github className="w-5 h-5 text-morocco-blue dark:text-morocco-gold" />
@@ -107,8 +111,9 @@ export function ContactSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
-              className="md:col-span-3 gap-4"
+              className="flex-1 gap-4 mt-6"  
             >
+              {/* Contact Form Section */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
@@ -167,6 +172,8 @@ export function ContactSection() {
               </form>
             </motion.div>
           </div>
+
+
         </motion.div>
       </div>
     </section>
