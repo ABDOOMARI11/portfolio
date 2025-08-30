@@ -35,7 +35,7 @@ const TechCarousel = ({ itemVariants }: { itemVariants: any }) => {
       setCurrentIndex((prevIndex) => 
         prevIndex >= technologies.length - 5 ? 0 : prevIndex + 1
       );
-    }, 2500); // Change toutes les 2.5 secondes
+    }, 500); // Change toutes les 2.5 secondes
     
     return () => clearInterval(interval);
   }, []);
