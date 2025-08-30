@@ -52,23 +52,7 @@ export function Header() {
         </motion.div>
         
         <div className="hidden md:flex items-center gap-8">
-          <motion.nav 
-            variants={navVariants}
-            initial="hidden"
-            animate="visible"
-            className="flex items-center gap-6"
-          >
-            {sections.map((section) => (
-              <motion.a
-                key={section}
-                href={`#${section}`}
-                variants={itemVariants}
-                className="text-sm font-medium hover:text-morocco-blue dark:hover:text-morocco-gold transition-colors capitalize"
-              >
-                {section}
-              </motion.a>
-            ))}
-          </motion.nav>
+
           
           <motion.div 
             initial={{ opacity: 0 }}
