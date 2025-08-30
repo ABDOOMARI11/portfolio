@@ -3,11 +3,20 @@ import { motion } from "framer-motion";
 export function ExperienceSection() {
   const experienceData = [
     {
+      company: "CLV Oralys",
+      position: "Internship",
+      period: "June 2025 - Aug 2025",
+      description: "Developed an ERP system for a hospital, including modules for patient management, appointment scheduling, billing, inventory, and staff administration. The system streamlined workflows, improved data accuracy, and enabled secure access for medical staff and administrators.",
+      technologies: ["Django", "Bootstrap 5", "PostgreSQL"],
+      type: "internship",
+      duration: "2 months"
+    },
+    {
       company: "Mediaverse",
       position: "End-of-Year Internship",
       period: "Apr 2024 - June 2024",
-      description: "Developed an online learning and course management system, 'DAcademy,' using Laravel for the back-end, ReactJS for the front-end, and MongoDB as the database.",
-      technologies: ["Laravel", "ReactJS", "MongoDB"],
+      description: "Developed an online learning and course management system, 'DAcademy,' using Spring Boot for the back-end, ReactJS for the front-end, and MongoDB as the database.",
+      technologies: ["Spring Boot", "ReactJS", "MongoDB"],
       type: "internship",
       duration: "3 months"
     },
@@ -70,9 +79,9 @@ export function ExperienceSection() {
 
   const itemVariants = {
     hidden: { 
-      x: 50, 
+      x: 30, 
       opacity: 0,
-      scale: 0.9
+      scale: 0.95
     },
     visible: {
       x: 0,
@@ -124,33 +133,155 @@ export function ExperienceSection() {
   };
 
   return (
-    <section id="experience" className="py-24 bg-gradient-to-br from-background via-secondary/20 to-background relative overflow-hidden">
+    <section id="experience" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-background via-secondary/20 to-background relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,theme(colors.morocco-gold/0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_50%,theme(colors.morocco-blue/0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,theme(colors.morocco-blue/0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_20%,theme(colors.morocco-gold/0.1),transparent_50%)]"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="max-w-4xl mx-auto"
+          viewport={{ once: true, margin: "-50px" }}
+          className="max-w-6xl mx-auto"
         >
-          <div className="text-center mb-16">
-            <h2 className="section-title bg-gradient-to-r from-morocco-gold to-morocco-blue bg-clip-text text-transparent">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="section-title bg-gradient-to-r from-morocco-gold to-morocco-blue bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl">
               Expérience Professionnelle
             </h2>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "4rem" }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="h-1 bg-gradient-to-r from-morocco-gold to-morocco-blue mx-auto mt-4 rounded-full"
+              className="h-1 bg-gradient-to-r from-morocco-gold to-morocco-blue mx-auto mt-3 sm:mt-4 rounded-full"
             />
           </div>
           
-          <div className="relative">
-            {/* Enhanced timeline line with gradient */}
+          {/* Mobile Layout - Vertical timeline */}
+          <div className="lg:hidden">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="space-y-6 sm:space-y-8 relative"
+            >
+              {/* Mobile timeline line */}
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-morocco-gold via-morocco-blue to-morocco-gold dark:from-morocco-blue dark:via-morocco-gold dark:to-morocco-blue rounded-full shadow-sm">
+                <div className="absolute inset-0 bg-gradient-to-b from-morocco-gold/50 to-morocco-blue/50 dark:from-morocco-blue/50 dark:to-morocco-gold/50 blur-sm rounded-full"></div>
+              </div>
+
+              {experienceData.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="relative flex items-start"
+                >
+                  {/* Mobile timeline dot */}
+                  <motion.div
+                    variants={timelineDotVariants}
+                    className={`flex-shrink-0 mt-2 mr-4 z-20 w-4 h-4 bg-gradient-to-br ${getTypeColor(item.type)} rounded-full border-2 border-white dark:border-gray-900 shadow-md relative`}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"
+                    />
+                  </motion.div>
+
+                  {/* Mobile content card */}
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.01,
+                      boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.15)"
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50 group overflow-hidden hover:ring-1 hover:ring-morocco-gold/30 dark:hover:ring-morocco-blue/30"
+                  >
+                    {/* Background gradient overlay */}
+                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${
+                      item.type === 'project' 
+                        ? 'from-morocco-gold/5 to-yellow-400/5'
+                        : 'from-morocco-blue/5 to-blue-600/5'
+                    }`}></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-2">
+                        <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:text-morocco-gold dark:group-hover:text-morocco-blue transition-colors duration-300 flex-1 leading-tight">
+                          {item.company}
+                        </h3>
+                        <span className={`ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getTypeColor(item.type)} text-white shadow-sm flex-shrink-0`}>
+                          <span className="mr-1 text-xs">{getTypeIcon(item.type)}</span>
+                          {item.type === 'internship' ? 'internship' : 'Project'}
+                        </span>
+                      </div>
+                      
+                      <h4 className={`text-sm sm:text-base font-semibold mb-2 ${
+                        item.type === 'project' 
+                          ? 'text-morocco-gold dark:text-morocco-gold' 
+                          : 'text-morocco-blue dark:text-morocco-gold'
+                      }`}>
+                        {item.position}
+                      </h4>
+                      
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
+                        <span className={`text-xs font-medium px-2 py-1 rounded-md inline-block ${
+                          item.type === 'project'
+                            ? 'bg-morocco-gold/10 text-morocco-gold border border-morocco-gold/20'
+                            : 'bg-morocco-blue/10 text-morocco-blue dark:bg-morocco-gold/10 dark:text-morocco-gold border border-morocco-blue/20 dark:border-morocco-gold/20'
+                        }`}>
+                          {item.period}
+                        </span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+                          {item.duration}
+                        </span>
+                      </div>
+                      
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed">
+                        {item.description}
+                      </p>
+                      
+                      {/* Technologies with improved mobile styling */}
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
+                        {item.technologies.map((tech, i) => (
+                          <motion.span 
+                            key={i} 
+                            whileHover={{ scale: 1.02 }}
+                            className={`skill-badge text-xs px-2 py-1 rounded-md font-medium transition-all duration-300 ${
+                              item.type === 'project'
+                                ? 'bg-morocco-gold/20 text-morocco-gold border border-morocco-gold/30 hover:bg-morocco-gold/30'
+                                : 'bg-morocco-blue/20 text-morocco-blue dark:bg-morocco-gold/20 dark:text-morocco-gold border border-morocco-blue/30 dark:border-morocco-gold/30 hover:bg-morocco-blue/30 dark:hover:bg-morocco-gold/30'
+                            }`}
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Decorative corner accent */}
+                    <div className={`absolute top-0 right-0 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-bl ${
+                      item.type === 'project' 
+                        ? 'from-morocco-gold/20 to-transparent' 
+                        : 'from-morocco-blue/20 to-transparent dark:from-morocco-gold/20'
+                    } rounded-bl-full`}></div>
+                    
+                    {/* Hover effect line */}
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.3 }}
+                      className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${getTypeColor(item.type)} rounded-b-xl`}
+                    />
+                  </motion.div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Desktop Layout - Alternating timeline */}
+          <div className="hidden lg:block relative">
+            {/* Desktop timeline line */}
             <div className="absolute left-1/2 w-1 bg-gradient-to-b from-morocco-gold via-morocco-blue to-morocco-gold dark:from-morocco-blue dark:via-morocco-gold dark:to-morocco-blue h-full transform -translate-x-1/2 rounded-full shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-b from-morocco-gold/50 to-morocco-blue/50 dark:from-morocco-blue/50 dark:to-morocco-gold/50 blur-sm rounded-full"></div>
             </div>
@@ -168,7 +299,7 @@ export function ExperienceSection() {
                   variants={itemVariants}
                   className={`timeline-item flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} w-full relative`}
                 >
-                  {/* Timeline dot with type-specific styling */}
+                  {/* Desktop timeline dot */}
                   <motion.div
                     variants={timelineDotVariants}
                     className={`absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2 z-20 w-5 h-5 bg-gradient-to-br ${getTypeColor(item.type)} rounded-full border-4 border-white dark:border-gray-900 shadow-lg flex items-center justify-center text-xs`}
@@ -194,8 +325,6 @@ export function ExperienceSection() {
                           ? 'from-morocco-gold/5 to-yellow-400/5'
                           : 'from-morocco-blue/5 to-blue-600/5'
                       }`}></div>
-                      
-
                       
                       <div className="relative z-10">
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-morocco-gold dark:group-hover:text-morocco-blue transition-colors duration-300">
@@ -250,7 +379,7 @@ export function ExperienceSection() {
                         <div className="flex justify-end">
                           <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getTypeColor(item.type)} text-white shadow-lg`}>
                             <span className="mr-1">{getTypeIcon(item.type)}</span>
-                            {item.type === 'internship' ? 'Stage' : 'Projet'}
+                            {item.type === 'internship' ? 'internship' : 'Project'}
                           </span>
                         </div>
                       </div>
