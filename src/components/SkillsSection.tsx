@@ -404,7 +404,7 @@ export function SkillsSection() {
 
               {/* Click to expand indicator */}
               <motion.div 
-                className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"
                 animate={{ 
                   scale: selectedCategory === category.name ? [1, 1.2, 1] : 1,
                 }}

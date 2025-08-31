@@ -107,32 +107,6 @@ export function AboutSection() {
                       Full Stack Developer
                     </p>
                   </div>
-
-                  {/* Contact Info */}
-                  <div className="space-y-4">
-                    {personalInfo.map((info, index) => (
-                      <motion.div
-                        key={index}
-                        variants={itemVariants}
-                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors"
-                      >
-                        <info.icon className={`w-5 h-5 mt-0.5 ${info.color}`} />
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm text-muted-foreground">{info.label}</p>
-                          {info.isLink ? (
-                            <a 
-                              href={`mailto:${info.value}`}
-                              className="text-sm font-medium hover:text-morocco-blue transition-colors break-words"
-                            >
-                              {info.value}
-                            </a>
-                          ) : (
-                            <p className="text-sm font-medium break-words">{info.value}</p>
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
 
@@ -150,10 +124,7 @@ export function AboutSection() {
                   </div>
                   
                   <div className="space-y-6 text-lg leading-relaxed">
-                    <motion.p variants={itemVariants} className="text-muted-foreground">
-                      I'm a passionate <span className="text-foreground font-semibold">full-stack developer</span> with 
-                      a love for building modern, scalable web applications that solve real-world problems. 
-                    </motion.p>
+
                     
                     <motion.p variants={itemVariants} className="text-muted-foreground">
                       Currently pursuing a <span className="text-foreground font-semibold">Master's degree in Information Systems Engineering</span> at 
@@ -161,12 +132,7 @@ export function AboutSection() {
                       and practical industry experience.
                     </motion.p>
                     
-                    <motion.p variants={itemVariants} className="text-muted-foreground">
-                      My expertise spans from <span className="text-foreground font-semibold">Laravel backend development</span> to 
-                      <span className="text-foreground font-semibold"> React/Next.js frontend</span> creation, specializing in 
-                      responsive, user-friendly interfaces. I've successfully delivered e-learning platforms, 
-                      HR management systems, and digital transformation solutions.
-                    </motion.p>
+     
 
                     <motion.div variants={itemVariants} className="bg-secondary/30 p-4 rounded-lg border-l-4 border-morocco-blue">
                       <p className="text-muted-foreground italic">

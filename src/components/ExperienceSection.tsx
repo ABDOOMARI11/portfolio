@@ -6,8 +6,9 @@ export function ExperienceSection() {
       company: "CLV Oralys",
       position: "Internship",
       period: "June 2025 - Aug 2025",
-      description: "Developed an ERP system for a hospital, including modules for patient management, appointment scheduling, billing, inventory, and staff administration. The system streamlined workflows, improved data accuracy, and enabled secure access for medical staff and administrators.",
-      technologies: ["Django", "Bootstrap 5", "PostgreSQL"],
+      description:
+        "Developed an ERP system for a hospital, including modules for patient management, appointment scheduling, billing, inventory, and staff administration. Implemented JWT authentication in Laravel for secure API access, and used Sanctum middleware to protect sensitive routes and manage user sessions. Integrated real-time notifications for appointment updates and billing alerts, enhancing communication between staff and patients. The system streamlined workflows, improved data accuracy, and enabled secure access for medical staff and administrators.",
+      technologies: ["Django", "Bootstrap 5", "PostgreSQL", "Laravel", "JWT", "Sanctum", "Notifications"],
       type: "internship",
       duration: "2 months"
     },
@@ -15,8 +16,18 @@ export function ExperienceSection() {
       company: "Mediaverse",
       position: "End-of-Year Internship",
       period: "Apr 2024 - June 2024",
-      description: "Developed an online learning and course management system, 'DAcademy,' using Spring Boot for the back-end, ReactJS for the front-end, and MongoDB as the database.",
-      technologies: ["Spring Boot", "ReactJS", "MongoDB"],
+      description:
+        "Developed an online learning and course management system, 'DAcademy,' using Spring Boot for the back-end and ReactJS for the front-end. Implemented Redux for state management, integrated Plyr.js for interactive video playback, and used cloud storage for video uploads. Leveraged YouTube API for video streaming, MongoDB Atlas cloud for database hosting, and Redis for caching to optimize performance.",
+      technologies: [
+        "Spring Boot",
+        "ReactJS",
+        "Redux",
+        "MongoDB Atlas",
+        "Redis",
+        "Plyr.js",
+        "YouTube API",
+        "Cloud Storage"
+      ],
       type: "internship",
       duration: "3 months"
     },
@@ -24,8 +35,9 @@ export function ExperienceSection() {
       company: "Province of Rehamna",
       position: "Final-Year Internship",
       period: "Apr 2023 - June 2023",
-      description: "Developed a web platform for human resource management for the province of Rehamna using Bootstrap for the front-end and Laravel for the back-end.",
-      technologies: ["Bootstrap", "Laravel"],
+      description:
+        "Developed a web platform for human resource management for the province of Rehamna using Bootstrap for the front-end and Laravel for the back-end. Implemented JWT authentication and Sanctum middleware to secure user access and API endpoints. Added notification features for leave requests and approvals, improving HR workflow and communication.",
+      technologies: ["Bootstrap", "Laravel", "JWT", "Sanctum", "Notifications"],
       type: "internship",
       duration: "3 months"
     },
@@ -33,8 +45,9 @@ export function ExperienceSection() {
       company: "EST Safi",
       position: "Final-Year Project",
       period: "Dec 2022 - June 2023",
-      description: "Developed a web platform for digitizing the internal affairs management of the DAR-TIFL institution using React JS and Tailwind CSS for the front-end, and Laravel for the back-end.",
-      technologies: ["React JS", "Tailwind CSS", "Laravel"],
+      description:
+        "Developed a web platform for digitizing the internal affairs management of the DAR-TIFL institution using React JS and Tailwind CSS for the front-end, and Laravel for the back-end. Integrated JWT authentication and Sanctum middleware for secure user management. Implemented notifications for administrative updates and document approvals.",
+      technologies: ["React JS", "Tailwind CSS", "Laravel", "JWT", "Sanctum", "Notifications"],
       type: "project",
       duration: "7 months"
     },
@@ -42,7 +55,8 @@ export function ExperienceSection() {
       company: "Specialized Institute of Traditional Arts",
       position: "Initiation Internship",
       period: "July 2022 - Aug 2022",
-      description: "Developed a web application for inventory management for the institute using HTML, CSS, and Bootstrap for the front-end, and PHP for the back-end.",
+      description:
+        "Developed a web application for inventory management for the institute using HTML, CSS, and Bootstrap for the front-end, and PHP for the back-end.",
       technologies: ["HTML", "CSS", "Bootstrap", "PHP"],
       type: "internship",
       duration: "2 months"
