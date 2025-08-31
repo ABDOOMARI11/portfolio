@@ -62,10 +62,10 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80"
     ],
-    tags: ["ReactJS", "Tailwind CSS", "Laravel"],
+    tags: ["ReactJS", "Tailwind CSS", "Laravel","MySQL"],
     features: ["Workflow Management", "Document Control", "Role-based Access", "Approval System", "Reporting Dashboard"],
     duration: "5 months",
-    role: "Frontend Lead"
+    role: "co-developer"
   },
   {
     id: 4,
@@ -94,10 +94,33 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1569517282132-25d22f4573a4?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
     ],
-    tags: ["Next.js", "TypeScript", "Node.js", "MongoDB"],
+    tags: ["Next.js", "TypeScript", "Spring Boot", "Mysql"],
     features: ["Biometric Authentication", "QR Code Generation", "Real-time Verification", "Multi-language Support", "Security Integration"],
     duration: "8 months",
     role: "Security Lead Developer"
+  },
+  {
+    id: 6,
+    title: "Interns Management Platform",
+    description: "An academic web application for managing master's students' final internships, permissions, and administrative processes. Developed by me and my partner Yahya Lemkharbech.",
+    detailedDescription: "This platform streamlines the management of final internships for master's students, providing tools for internship assignment, permissions workflow, supervisor and student management, document uploads, and progress tracking. Role-based access ensures secure operations for students, supervisors, and administrators. Built as an academic project using modern technologies.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80"
+    ],
+    tags: ["Spring Boot", "ReactJS", "MySQL"],
+    features: [
+      "Internship Assignment",
+      "Permissions Management",
+      "Role-based Access",
+      "Supervisor & Student Management",
+      "Document Uploads",
+      "Progress Tracking"
+    ],
+    duration: "2 months",
+    role: "Co-Developer (with Yahya Lemkharbech)"
   }
 ];
 

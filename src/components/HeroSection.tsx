@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 // Import des icônes React Icons
-import { FaReact, FaNodeJs, FaPython, FaPhp, FaJava, FaGitAlt, FaDocker } from "react-icons/fa";
-import { SiNextdotjs, SiSpring, SiLaravel, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiJavascript,SiDjango,SiSpringboot } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaPhp, FaJava, FaGitAlt, FaDocker, FaGithub } from "react-icons/fa";
+import { SiNextdotjs, SiSpring, SiLaravel, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiJavascript,SiDjango,SiSpringboot,SiMysql } from "react-icons/si";
 
 // Données des technologies avec vraies icônes
 const technologies = [
@@ -22,7 +22,9 @@ const technologies = [
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "Docker", icon: FaDocker, color: "#2496ED" },
-  { name: "Git", icon: FaGitAlt, color: "#F05032" }
+  { name: "Git", icon: FaGitAlt, color: "#F05032" },
+  { name: "GitHub", icon: FaGithub, color: "#000000" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" }
 ];
 
 // Composant TechCarousel

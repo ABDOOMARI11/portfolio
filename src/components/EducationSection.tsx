@@ -109,7 +109,7 @@ export function EducationSection() {
         >
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="section-title bg-gradient-to-r from-morocco-blue to-morocco-gold bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl">
-              Parcours Académique
+              Academic Journey
             </h2>
             <motion.div
               initial={{ width: 0 }}

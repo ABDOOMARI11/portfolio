@@ -84,7 +84,7 @@ export function AboutSection() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="section-title mb-4">About Me</h2>
+            <h2 className="section-title bg-gradient-to-r from-morocco-blue to-morocco-gold bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl">About Me</h2>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
