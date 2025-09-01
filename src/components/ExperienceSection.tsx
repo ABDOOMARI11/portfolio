@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 export function ExperienceSection() {
   const experienceData = [
     {
-      company: "CLV Oralys",
+      company: "Confidential Company",
       position: "Internship",
       period: "June 2025 - Aug 2025",
       description:
-        "Developed an ERP system for a hospital, including modules for patient management, appointment scheduling, billing, inventory, and staff administration. Implemented JWT authentication in Laravel for secure API access, and used Sanctum middleware to protect sensitive routes and manage user sessions. Integrated real-time notifications for appointment updates and billing alerts, enhancing communication between staff and patients. The system streamlined workflows, improved data accuracy, and enabled secure access for medical staff and administrators.",
-      technologies: ["Django", "Bootstrap 5", "PostgreSQL", "Laravel", "JWT", "Sanctum", "Notifications"],
+        "Contributed to the development of a large-scale enterprise software solution in the healthcare sector. Worked on implementing secure authentication, session management, and real-time notification features. Focused on improving workflows, data accuracy, and secure access for end users while adhering to strict confidentiality requirements.",
+      technologies: ["Django", "Bootstrap 5", "PostgreSQL"],
       type: "internship",
       duration: "2 months"
     },
@@ -92,8 +92,8 @@ export function ExperienceSection() {
   };
 
   const itemVariants = {
-    hidden: { 
-      x: 30, 
+    hidden: {
+      x: 30,
       opacity: 0,
       scale: 0.95
     },
@@ -101,9 +101,9 @@ export function ExperienceSection() {
       x: 0,
       opacity: 1,
       scale: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 120, 
+      transition: {
+        type: "spring",
+        stiffness: 120,
         damping: 20,
         duration: 0.6
       }
@@ -112,12 +112,12 @@ export function ExperienceSection() {
 
   const timelineDotVariants = {
     hidden: { scale: 0, opacity: 0 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       opacity: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 200, 
+      transition: {
+        type: "spring",
+        stiffness: 200,
         damping: 15,
         delay: 0.2
       }
@@ -151,7 +151,7 @@ export function ExperienceSection() {
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,theme(colors.morocco-gold/0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_50%,theme(colors.morocco-blue/0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,theme(colors.morocco-blue/0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_20%,theme(colors.morocco-gold/0.1),transparent_50%)]"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -171,7 +171,7 @@ export function ExperienceSection() {
               className="h-1 bg-gradient-to-r from-morocco-gold to-morocco-blue mx-auto mt-3 sm:mt-4 rounded-full"
             />
           </div>
-          
+
           {/* Mobile Layout - Vertical timeline */}
           <div className="lg:hidden">
             <motion.div
@@ -205,7 +205,7 @@ export function ExperienceSection() {
 
                   {/* Mobile content card */}
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.01,
                       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.15)"
                     }}
@@ -213,12 +213,11 @@ export function ExperienceSection() {
                     className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50 group overflow-hidden hover:ring-1 hover:ring-morocco-gold/30 dark:hover:ring-morocco-blue/30"
                   >
                     {/* Background gradient overlay */}
-                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${
-                      item.type === 'project' 
+                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${item.type === 'project'
                         ? 'from-morocco-gold/5 to-yellow-400/5'
                         : 'from-morocco-blue/5 to-blue-600/5'
-                    }`}></div>
-                    
+                      }`}></div>
+
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:text-morocco-gold dark:group-hover:text-morocco-blue transition-colors duration-300 flex-1 leading-tight">
@@ -229,57 +228,53 @@ export function ExperienceSection() {
                           {item.type === 'internship' ? 'internship' : 'Project'}
                         </span>
                       </div>
-                      
-                      <h4 className={`text-sm sm:text-base font-semibold mb-2 ${
-                        item.type === 'project' 
-                          ? 'text-morocco-gold dark:text-morocco-gold' 
+
+                      <h4 className={`text-sm sm:text-base font-semibold mb-2 ${item.type === 'project'
+                          ? 'text-morocco-gold dark:text-morocco-gold'
                           : 'text-morocco-blue dark:text-morocco-gold'
-                      }`}>
+                        }`}>
                         {item.position}
                       </h4>
-                      
+
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                        <span className={`text-xs font-medium px-2 py-1 rounded-md inline-block ${
-                          item.type === 'project'
+                        <span className={`text-xs font-medium px-2 py-1 rounded-md inline-block ${item.type === 'project'
                             ? 'bg-morocco-gold/10 text-morocco-gold border border-morocco-gold/20'
                             : 'bg-morocco-blue/10 text-morocco-blue dark:bg-morocco-gold/10 dark:text-morocco-gold border border-morocco-blue/20 dark:border-morocco-gold/20'
-                        }`}>
+                          }`}>
                           {item.period}
                         </span>
                         <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
                           {item.duration}
                         </span>
                       </div>
-                      
+
                       <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed">
                         {item.description}
                       </p>
-                      
+
                       {/* Technologies with improved mobile styling */}
                       <div className="flex flex-wrap gap-1 sm:gap-2">
                         {item.technologies.map((tech, i) => (
-                          <motion.span 
-                            key={i} 
+                          <motion.span
+                            key={i}
                             whileHover={{ scale: 1.02 }}
-                            className={`skill-badge text-xs px-2 py-1 rounded-md font-medium transition-all duration-300 ${
-                              item.type === 'project'
+                            className={`skill-badge text-xs px-2 py-1 rounded-md font-medium transition-all duration-300 ${item.type === 'project'
                                 ? 'bg-morocco-gold/20 text-morocco-gold border border-morocco-gold/30 hover:bg-morocco-gold/30'
                                 : 'bg-morocco-blue/20 text-morocco-blue dark:bg-morocco-gold/20 dark:text-morocco-gold border border-morocco-blue/30 dark:border-morocco-gold/30 hover:bg-morocco-blue/30 dark:hover:bg-morocco-gold/30'
-                            }`}
+                              }`}
                           >
                             {tech}
                           </motion.span>
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Decorative corner accent */}
-                    <div className={`absolute top-0 right-0 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-bl ${
-                      item.type === 'project' 
-                        ? 'from-morocco-gold/20 to-transparent' 
+                    <div className={`absolute top-0 right-0 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-bl ${item.type === 'project'
+                        ? 'from-morocco-gold/20 to-transparent'
                         : 'from-morocco-blue/20 to-transparent dark:from-morocco-gold/20'
-                    } rounded-bl-full`}></div>
-                    
+                      } rounded-bl-full`}></div>
+
                     {/* Hover effect line */}
                     <motion.div
                       initial={{ width: 0 }}
@@ -299,7 +294,7 @@ export function ExperienceSection() {
             <div className="absolute left-1/2 w-1 bg-gradient-to-b from-morocco-gold via-morocco-blue to-morocco-gold dark:from-morocco-blue dark:via-morocco-gold dark:to-morocco-blue h-full transform -translate-x-1/2 rounded-full shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-b from-morocco-gold/50 to-morocco-blue/50 dark:from-morocco-blue/50 dark:to-morocco-gold/50 blur-sm rounded-full"></div>
             </div>
-            
+
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -326,7 +321,7 @@ export function ExperienceSection() {
 
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
                     <motion.div
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.02,
                         boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
                       }}
@@ -334,61 +329,57 @@ export function ExperienceSection() {
                       className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 group overflow-hidden hover:ring-2 hover:ring-morocco-gold/30 dark:hover:ring-morocco-blue/30"
                     >
                       {/* Background gradient overlay */}
-                      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${
-                        item.type === 'project' 
+                      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${item.type === 'project'
                           ? 'from-morocco-gold/5 to-yellow-400/5'
                           : 'from-morocco-blue/5 to-blue-600/5'
-                      }`}></div>
-                      
+                        }`}></div>
+
                       <div className="relative z-10">
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-morocco-gold dark:group-hover:text-morocco-blue transition-colors duration-300">
                           {item.company}
                         </h3>
-                        
+
                         <div className="flex items-center justify-between mb-3">
-                          <h4 className={`text-lg font-semibold ${
-                            item.type === 'project' 
-                              ? 'text-morocco-gold dark:text-morocco-gold' 
+                          <h4 className={`text-lg font-semibold ${item.type === 'project'
+                              ? 'text-morocco-gold dark:text-morocco-gold'
                               : 'text-morocco-blue dark:text-morocco-gold'
-                          }`}>
+                            }`}>
                             {item.position}
                           </h4>
                         </div>
-                        
+
                         <div className="flex items-center gap-4 mb-4">
-                          <span className={`text-sm font-medium px-3 py-1 rounded-lg ${
-                            item.type === 'project'
+                          <span className={`text-sm font-medium px-3 py-1 rounded-lg ${item.type === 'project'
                               ? 'bg-morocco-gold/10 text-morocco-gold border border-morocco-gold/20'
                               : 'bg-morocco-blue/10 text-morocco-blue dark:bg-morocco-gold/10 dark:text-morocco-gold border border-morocco-blue/20 dark:border-morocco-gold/20'
-                          }`}>
+                            }`}>
                             {item.period}
                           </span>
                           <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
                             {item.duration}
                           </span>
                         </div>
-                        
+
                         <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-sm">
                           {item.description}
                         </p>
-                        
+
                         {/* Technologies with improved styling */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {item.technologies.map((tech, i) => (
-                            <motion.span 
-                              key={i} 
+                            <motion.span
+                              key={i}
                               whileHover={{ scale: 1.05 }}
-                              className={`skill-badge text-xs px-3 py-1 rounded-full font-medium transition-all duration-300 ${
-                                item.type === 'project'
+                              className={`skill-badge text-xs px-3 py-1 rounded-full font-medium transition-all duration-300 ${item.type === 'project'
                                   ? 'bg-morocco-gold/20 text-morocco-gold border border-morocco-gold/30 hover:bg-morocco-gold/30'
                                   : 'bg-morocco-blue/20 text-morocco-blue dark:bg-morocco-gold/20 dark:text-morocco-gold border border-morocco-blue/30 dark:border-morocco-gold/30 hover:bg-morocco-blue/30 dark:hover:bg-morocco-gold/30'
-                              }`}
+                                }`}
                             >
                               {tech}
                             </motion.span>
                           ))}
                         </div>
-                        
+
                         {/* Type badge at bottom */}
                         <div className="flex justify-end">
                           <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getTypeColor(item.type)} text-white shadow-lg`}>
@@ -397,14 +388,13 @@ export function ExperienceSection() {
                           </span>
                         </div>
                       </div>
-                      
+
                       {/* Decorative corner accent */}
-                      <div className={`absolute top-0 left-0 w-16 h-16 bg-gradient-to-br ${
-                        item.type === 'project' 
-                          ? 'from-morocco-gold/20 to-transparent' 
+                      <div className={`absolute top-0 left-0 w-16 h-16 bg-gradient-to-br ${item.type === 'project'
+                          ? 'from-morocco-gold/20 to-transparent'
                           : 'from-morocco-blue/20 to-transparent dark:from-morocco-gold/20'
-                      } rounded-br-full`}></div>
-                      
+                        } rounded-br-full`}></div>
+
                       {/* Hover effect line */}
                       <motion.div
                         initial={{ width: 0 }}

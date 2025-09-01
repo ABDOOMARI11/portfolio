@@ -73,9 +73,11 @@ const projects: Project[] = [
       "/lovable-uploads/stagaire/17.png"
     ],
     tags: [
-      "Spring Boot (REST API, JWT, Middleware)",
-      "ReactJS (SPA, Hooks, Context)",
-      "MySQL (Transactions, Relational DB)"
+      "Spring Boot",
+      "React",
+      "MySQL",
+      "JWT",
+      "REST API"
     ],
     features: [
       "Internship Assignment & Permissions Management",
@@ -107,12 +109,11 @@ const projects: Project[] = [
       "/lovable-uploads/fanid/11.jpg",
     ],
     tags: [
-      "Next.js (SSR, TypeScript)",
-      "TypeScript (Type Safety)",
-      "Spring Boot (Microservices, JWT, Middleware)",
-      "MySQL (Relational DB)",
-      "Redis (Cache)",
-      "WebSocket (Real-time Updates)"
+      "Next.js",
+      "TypeScript",
+      "Spring Boot",
+      "MySQL",
+      "JWT"
     ],
     features: [
       "Biometric Authentication & QR Code Generation",
@@ -151,11 +152,12 @@ const projects: Project[] = [
       "/lovable-uploads/dacademy/verification.png"
     ],
     tags: [
-      "Laravel (RESTful API, Middleware, JWT Auth)",
-      "ReactJS (Hooks, SPA, Context API)",
-      "MongoDB (NoSQL, Aggregation)",
-      "Redis (Caching, Pub/Sub)",
-      "WebSocket (Real-time Chat)"
+      "Laravel",
+      "React",
+      "MongoDB",
+      "Redis",
+      "WebSocket",
+      "JWT"
     ],
     features: [
       "JWT-based User Authentication",
@@ -197,13 +199,12 @@ const projects: Project[] = [
       "/lovable-uploads/preregistration/22.png"
     ],
     tags: [
-      "PHP",
       "Laravel",
-      "HTML",
-      "CSS",
+      "PHP",
+      "MySQL",
       "JavaScript",
-      "XML",
-      "MySQL"
+      "HTML",
+      "CSS"
     ],
     features: [
       "Secure Account Creation with Email Verification",
@@ -232,9 +233,9 @@ const projects: Project[] = [
     ],
     tags: [
       "Firebase",
+      "JavaScript",
       "HTML",
       "CSS",
-      "JavaScript",
       "Gemini API"
     ],
     features: [
@@ -265,11 +266,12 @@ const projects: Project[] = [
       "/lovable-uploads/sportsclub/8.png"
     ],
     tags: [
-      "PHP (CodeIgniter)",
-      "HTML",
-      "CSS",
+      "PHP",
+      "CodeIgniter",
+      "MySQL",
       "JavaScript",
-      "MySQL"
+      "HTML",
+      "CSS"
     ],
     features: [
       "Member Registration & Profile Management",
@@ -300,10 +302,11 @@ const projects: Project[] = [
       "/lovable-uploads/rh/11.png"
     ],
     tags: [
-      "Bootstrap (Responsive Design)",
-      "Laravel (REST API, Middleware, JWT)",
-      "MySQL (Relational DB, Transactions)",
-      "Redis (Cache, Analytics)"
+      "Laravel",
+      "Bootstrap",
+      "MySQL",
+      "Redis",
+      "JWT"
     ],
     features: [
       "Employee Management & Payroll System",
@@ -343,11 +346,12 @@ const projects: Project[] = [
       "/lovable-uploads/dartifl/r.png"
     ],
     tags: [
-      "ReactJS (SPA, Hooks, Context)",
-      "Tailwind CSS (Utility-first Styling)",
-      "Laravel (Middleware, JWT, REST API)",
-      "MySQL (Relational DB)",
-      "Redis (Cache)"
+      "Laravel",
+      "React",
+      "Tailwind CSS",
+      "MySQL",
+      "Redis",
+      "JWT"
     ],
     features: [
       "Workflow Management & Document Control",
@@ -376,10 +380,11 @@ const projects: Project[] = [
       "/lovable-uploads/chatroom/8.jpeg"
     ],
     tags: [
-      "Spring Boot (REST API, WebSocket, Security)",
-      "Spring Security (Authentication, Authorization)",
-      "ReactJS (SPA, Hooks)",
-      "Tailwind CSS (Utility-first Styling)"
+      "Spring Boot",
+      "Spring Security",
+      "React",
+      "Tailwind CSS",
+      "WebSocket"
     ],
     features: [
       "Real-time Messaging (WebSocket)",
@@ -392,6 +397,7 @@ const projects: Project[] = [
     role: "Co-Developer (with Yahya Lemkharbech)"
   }
 ];
+
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
