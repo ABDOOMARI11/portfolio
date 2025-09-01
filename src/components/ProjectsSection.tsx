@@ -125,7 +125,7 @@ const projects: Project[] = [
       "Redis Cache for Fast Verification",
       "Microservices Architecture (Spring Boot)"
     ],
-    duration: "8 months",
+    duration: "3 months",
     role: "Lead Developer"
   },
   // 4. DAcademy
@@ -170,7 +170,7 @@ const projects: Project[] = [
       "Microservices Architecture",
       "Role-based Access Control"
     ],
-    duration: "4 months",
+    duration: "2 months",
     role: "Full Stack Developer"
   },
   // 5. Online Pre Registration
@@ -285,7 +285,7 @@ const projects: Project[] = [
       "Real-time Status Updates",
       "Secure Authentication"
     ],
-    duration: "2 months",
+    duration: "2 weeks",
     role: "Full Stack Developer"
   },
   // 8. HR Management
@@ -321,7 +321,7 @@ const projects: Project[] = [
       "Secure API (JWT, Middleware)",
       "Integration with Government Databases"
     ],
-    duration: "6 months",
+    duration: "2 months",
     role: "Lead Developer"
   },
   // 9. Dar Tifl
@@ -366,7 +366,7 @@ const projects: Project[] = [
       "Secure API (JWT, Middleware)",
       "Automated Workflow Management"
     ],
-    duration: "5 months",
+    duration: "7 months",
     role: "Co-Developer"
   },
   // 10. Chatroom
