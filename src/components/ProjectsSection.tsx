@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { X, ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Eye, Filter } from "lucide-react";
 
 interface Project {
   id: number;
@@ -19,7 +19,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  // 1. Old Portfolio
   {
     id: 10,
     title: "Personal Portfolio (Old Version)",
@@ -49,7 +48,6 @@ const projects: Project[] = [
     duration: "2 weeks",
     role: "Frontend Developer"
   },
-  // 2. Interns Management
   {
     id: 1,
     title: "Interns Management Platform",
@@ -90,7 +88,6 @@ const projects: Project[] = [
     duration: "2 months",
     role: "Co-Developer (with Yahya Lemkharbech)"
   },
-  // 3. Fan ID
   {
     id: 2,
     title: "World Cup 2030 Fan ID System",
@@ -128,7 +125,6 @@ const projects: Project[] = [
     duration: "3 months",
     role: "Lead Developer"
   },
-  // 4. DAcademy
   {
     id: 3,
     title: "DAcademy - Online Learning System",
@@ -173,7 +169,6 @@ const projects: Project[] = [
     duration: "2 months",
     role: "Full Stack Developer"
   },
-  // 5. Online Pre Registration
   {
     id: 7,
     title: "Online Pre-Registration Platform",
@@ -220,7 +215,6 @@ const projects: Project[] = [
     duration: "1 month",
     role: "Full Stack Developer"
   },
-  // 6. Social Network
   {
     id: 8,
     title: "Social Network for Professional Bachelor's Students Powered by AI",
@@ -254,7 +248,6 @@ const projects: Project[] = [
     duration: "1 month",
     role: "Full Stack Developer"
   },
-  // 7. Club Management
   {
     id: 9,
     title: "Sports Club Management Platform",
@@ -288,9 +281,8 @@ const projects: Project[] = [
     duration: "2 weeks",
     role: "Full Stack Developer"
   },
-  // 8. HR Management
   {
-    id: 2,
+    id: 4,
     title: "Human Resources Management Platform",
     description: "A web platform for managing human resources for the Province of Rehamna, built with Bootstrap (responsive UI), Laravel (REST API, middleware, JWT), MySQL, and Redis cache.",
     detailedDescription: "A comprehensive HR management system designed specifically for government institutions. The platform streamlines employee management, payroll processing, leave requests, performance evaluations, and document management. Features include automated reporting, dashboard analytics, and integration with existing government databases. Laravel middleware and JWT authentication secure the API endpoints, while Redis cache accelerates dashboard analytics and reporting.",
@@ -324,9 +316,8 @@ const projects: Project[] = [
     duration: "2 months",
     role: "Lead Developer"
   },
-  // 9. Dar Tifl
   {
-    id: 3,
+    id: 5,
     title: "DAR-TIFL Internal Affairs Management",
     description: "A platform for digitalizing the internal affairs of the DAR-TIFL institution, using ReactJS (SPA, hooks), Tailwind CSS (utility-first styling), Laravel (middleware, JWT), MySQL, and Redis cache.",
     detailedDescription: "Digital transformation solution for DAR-TIFL institution's internal processes. The system handles administrative workflows, document management, approval processes, and inter-department communication. Features a modern, responsive interface with role-based access control and automated workflow management. Laravel middleware and JWT secure sensitive endpoints, while Redis cache speeds up workflow queries.",
@@ -369,7 +360,6 @@ const projects: Project[] = [
     duration: "7 months",
     role: "Co-Developer"
   },
-  // 10. Chatroom
   {
     id: 6,
     title: "Chat Room for Information System Master's Students",
@@ -403,10 +393,28 @@ const projects: Project[] = [
   }
 ];
 
-
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  // Get unique tags for filter
+  const allTags = useMemo(() => {
+    const tagsSet = new Set<string>();
+    projects.forEach(project => {
+      project.tags.forEach(tag => tagsSet.add(tag));
+    });
+    return Array.from(tagsSet).sort();
+  }, []);
+
+  // Filter projects based on selected tags
+  const filteredProjects = useMemo(() => {
+    if (selectedTags.length === 0) return projects;
+    return projects.filter(project =>
+      selectedTags.every(tag => project.tags.includes(tag))
+    );
+  }, [selectedTags]);
 
   const sectionVariants = {
     hidden: { opacity: 0 },
@@ -419,6 +427,11 @@ export function ProjectsSection() {
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 }
+  };
+
+  const filterVariants = {
+    hidden: { height: 0, opacity: 0 },
+    visible: { height: "auto", opacity: 1, transition: { duration: 0.3 } }
   };
 
   const nextImage = () => {
@@ -446,6 +459,18 @@ export function ProjectsSection() {
     setSelectedProject(null);
   };
 
+  const toggleTag = (tag: string) => {
+    setSelectedTags(prev =>
+      prev.includes(tag)
+        ? prev.filter(t => t !== tag)
+        : [...prev, tag]
+    );
+  };
+
+  const clearFilters = () => {
+    setSelectedTags([]);
+  };
+
   return (
     <section id="projects" className="py-16 md:py-24 bg-secondary/50 dark:bg-morocco-dark/30">
       <div className="container px-4 mx-auto">
@@ -464,50 +489,118 @@ export function ProjectsSection() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <motion.div 
-              key={project.id} 
-              variants={itemVariants} 
-              whileHover={{ y: -5 }}
-              className="group cursor-pointer"
-              onClick={() => openModal(project)}
+        {/* Filter Section */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold">Filter by Technology</h3>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              className="flex items-center gap-2"
             >
-              <Card className="h-full transition-all duration-300 hover:shadow-lg">
-                <div className="aspect-video overflow-hidden relative">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <Eye className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="line-clamp-2">{project.title}</CardTitle>
-                  <CardDescription className="line-clamp-3">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                    {project.tags.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{project.tags.length - 3}
-                      </Badge>
-                    )}
-                  </div>
-                  <Button variant="outline" size="sm" className="w-full">
-                    View Details
+              <Filter className="w-4 h-4" />
+              {isFilterOpen ? "Hide Filters" : "Show Filters"}
+            </Button>
+          </div>
+          <AnimatePresence>
+            {isFilterOpen && (
+              <motion.div
+                variants={filterVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="flex flex-wrap gap-2 p-4 bg-background rounded-lg shadow"
+              >
+                {allTags.map(tag => (
+                  <Button
+                    key={tag}
+                    variant={selectedTags.includes(tag) ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => toggleTag(tag)}
+                    className="text-xs"
+                  >
+                    {tag}
                   </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                ))}
+                {selectedTags.length > 0 && (
+                  <Button
+                    variant="destructive"
+                    size="sm"
+                    onClick={clearFilters}
+                    className="text-xs"
+                  >
+                    Clear Filters
+                  </Button>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {selectedTags.length > 0 && (
+            <div className="mt-4 text-sm text-muted-foreground">
+              Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''} with tags: {selectedTags.join(', ')}
+            </div>
+          )}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              <motion.div 
+                key={project.id} 
+                variants={itemVariants} 
+                whileHover={{ y: -5 }}
+                className="group cursor-pointer"
+                onClick={() => openModal(project)}
+              >
+                <Card className="h-full transition-all duration-300 hover:shadow-lg">
+                  <div className="aspect-video overflow-hidden relative">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                      <Eye className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="line-clamp-2">{project.title}</CardTitle>
+                    <CardDescription className="line-clamp-3">{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                      {project.tags.length > 3 && (
+                        <Badge variant="outline" className="text-xs">
+                          +{project.tags.length - 3}
+                        </Badge>
+                      )}
+                    </div>
+                    <Button variant="outline" size="sm" className="w-full">
+                      View Details
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-full text-center py-8">
+              <p className="text-muted-foreground">No projects match the selected filters.</p>
+              <Button
+                variant="link"
+                onClick={clearFilters}
+                className="mt-2"
+              >
+                Clear Filters
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Modal */}
