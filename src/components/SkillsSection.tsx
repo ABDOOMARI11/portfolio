@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { 
   FaReact, FaPhp, FaJava, FaJs, FaDatabase, 
-  FaCode, FaServer, FaLaptopCode, FaBookReader, 
-  FaMusic, FaRunning, FaCertificate, FaGlobe, FaPython
+  FaCode, FaServer, FaLaptopCode, FaBookReader, FaLock,
+  FaMusic, FaRunning, FaCertificate, FaGlobe, FaPython, FaLinux, FaWindows, FaDesktop
 } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiLaravel, SiSpringboot, SiMongodb, SiMysql, SiPostgresql, SiDjango, SiCodeigniter } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
@@ -82,6 +82,28 @@ export function SkillsSection() {
       ]
     },
     {
+      name: "Operating Systems",
+      icon: FaDesktop,
+      color: "from-gray-500 to-blue-600",
+      bgPattern: "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20",
+      skills: [
+        { 
+          name: "Linux", 
+          level: "Intermediate", 
+          progress: 70, 
+          icon: FaLinux, 
+          description: "Ubuntu (Intermediate), Kali Linux (Beginner)" 
+        },
+        { 
+          name: "Windows", 
+          level: "Advanced", 
+          progress: 90, 
+          icon: FaWindows, 
+          description: "Windows OS management and troubleshooting" 
+        }
+      ]
+    },
+    {
       name: "Frontend",
       icon: FaLaptopCode,
       color: "from-purple-500 to-pink-600",
@@ -99,7 +121,9 @@ export function SkillsSection() {
       bgPattern: "bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20",
       skills: [
         { name: "REST API", level: "Advanced", progress: 85, icon: FaServer, description: "API design" },
-        { name: "Microservices", level: "Intermediate", progress: 65, icon: FaCode, description: "Distributed architecture" }
+        { name: "Microservices", level: "Intermediate", progress: 65, icon: FaCode, description: "Distributed architecture" },
+        { name: "JWT Authentication", level: "Advanced", progress: 80, icon: FaLock, description: "Secure authentication using JSON Web Tokens" },
+        { name: "Log Management", level: "Intermediate", progress: 70, icon: FaDatabase, description: "Centralized logging and monitoring (e.g., ELK Stack, Graylog)" }
       ]
     },
     {

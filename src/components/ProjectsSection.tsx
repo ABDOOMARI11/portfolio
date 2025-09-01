@@ -19,8 +19,118 @@ interface Project {
 }
 
 const projects: Project[] = [
+  // 1. Old Portfolio
+  {
+    id: 10,
+    title: "Personal Portfolio (Old Version)",
+    description: "My previous personal portfolio website built with Next.js, showcasing my projects and skills.",
+    detailedDescription: "This is the old version of my personal portfolio, developed using Next.js. It features a modern, responsive design and highlights my web development projects, skills, and contact information. The site is deployed on Vercel and demonstrates my proficiency with React, Next.js, and frontend technologies.",
+    image: "/lovable-uploads/portfolio-old/1.png",
+    gallery: [
+      "/lovable-uploads/portfolio-old/2.png",
+      "/lovable-uploads/portfolio-old/3.png",
+      "/lovable-uploads/portfolio-old/4.png",
+      "/lovable-uploads/portfolio-old/5.png",
+      "/lovable-uploads/portfolio-old/6.png"
+    ],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Vercel",
+      "Tailwind CSS"
+    ],
+    features: [
+      "Responsive Design",
+      "Project Showcase",
+      "Contact Form",
+      "Deployed on Vercel"
+    ],
+    duration: "2 weeks",
+    role: "Frontend Developer"
+  },
+  // 2. Interns Management
   {
     id: 1,
+    title: "Interns Management Platform",
+    description: "An academic web application for managing master's students' final internships, permissions, and administrative processes. Developed by me and my partner Yahya Lemkharbech using Spring Boot (REST API, JWT, middleware), ReactJS (SPA, hooks), and MySQL.",
+    detailedDescription: "This platform streamlines the management of final internships for master's students, providing tools for internship assignment, permissions workflow, supervisor and student management, document uploads, and progress tracking. Role-based access ensures secure operations for students, supervisors, and administrators. JWT authentication and middleware secure the API, while MySQL transactions guarantee data consistency. Built as an academic project using modern technologies.",
+    image:"/lovable-uploads/stagaire/1.jpg",
+    gallery: [
+      "/lovable-uploads/stagaire/2.png",
+      "/lovable-uploads/stagaire/3.png",
+      "/lovable-uploads/stagaire/4.png",
+      "/lovable-uploads/stagaire/5.png",
+      "/lovable-uploads/stagaire/6.png",
+      "/lovable-uploads/stagaire/7.png",
+      "/lovable-uploads/stagaire/8.png",
+      "/lovable-uploads/stagaire/9.png",
+      "/lovable-uploads/stagaire/10.png",
+      "/lovable-uploads/stagaire/11.png",
+      "/lovable-uploads/stagaire/12.png",
+      "/lovable-uploads/stagaire/13.png",
+      "/lovable-uploads/stagaire/14.png",
+      "/lovable-uploads/stagaire/15.png",
+      "/lovable-uploads/stagaire/16.png",
+      "/lovable-uploads/stagaire/17.png"
+    ],
+    tags: [
+      "Spring Boot (REST API, JWT, Middleware)",
+      "ReactJS (SPA, Hooks, Context)",
+      "MySQL (Transactions, Relational DB)"
+    ],
+    features: [
+      "Internship Assignment & Permissions Management",
+      "Role-based Access (JWT, Middleware)",
+      "Supervisor & Student Management",
+      "Document Uploads & Progress Tracking",
+      "Secure API Endpoints",
+      "Academic Project Collaboration"
+    ],
+    duration: "2 months",
+    role: "Co-Developer (with Yahya Lemkharbech)"
+  },
+  // 3. Fan ID
+  {
+    id: 2,
+    title: "World Cup 2030 Fan ID System",
+    description: "A secure web platform for generating and verifying Fan IDs for the 2030 FIFA World Cup, integrating biometric authentication, QR code verification, JWT, Redis cache, and Spring Boot microservices.",
+    detailedDescription: "High-security digital identity platform for FIFA World Cup 2030 fan identification and verification. Features biometric enrollment, secure QR code generation, real-time verification at venues, and integration with international security databases. JWT authentication and middleware secure user sessions, Redis cache accelerates verification, and WebSocket enables real-time venue updates. Built with enterprise-grade security protocols and multi-language support.",
+    image:"/lovable-uploads/fanid/1.jpg",
+    gallery: [
+      "/lovable-uploads/fanid/2.jpg",
+      "/lovable-uploads/fanid/3.jpg",
+      "/lovable-uploads/fanid/4.jpg",
+      "/lovable-uploads/fanid/5.jpg",
+      "/lovable-uploads/fanid/6.jpg",
+      "/lovable-uploads/fanid/7.jpg",
+      "/lovable-uploads/fanid/8.jpg",
+      "/lovable-uploads/fanid/9.jpg",
+      "/lovable-uploads/fanid/10.jpg",
+      "/lovable-uploads/fanid/11.jpg",
+    ],
+    tags: [
+      "Next.js (SSR, TypeScript)",
+      "TypeScript (Type Safety)",
+      "Spring Boot (Microservices, JWT, Middleware)",
+      "MySQL (Relational DB)",
+      "Redis (Cache)",
+      "WebSocket (Real-time Updates)"
+    ],
+    features: [
+      "Biometric Authentication & QR Code Generation",
+      "Real-time Verification (WebSocket)",
+      "Multi-language Support",
+      "Security Integration (JWT, Middleware)",
+      "Redis Cache for Fast Verification",
+      "Microservices Architecture (Spring Boot)"
+    ],
+    duration: "8 months",
+    role: "Lead Developer"
+  },
+  // 4. DAcademy
+  {
+    id: 3,
     title: "DAcademy - Online Learning System",
     description: "A web-based e-learning and course management platform developed with Laravel (back-end), ReactJS (front-end), MongoDB, JWT authentication, Redis caching, and WebSocket-powered chat rooms.",
     detailedDescription: "DAcademy is a comprehensive online learning management system designed to facilitate modern education through technology. The platform features user authentication using JWT middleware for secure API access, course creation and management, interactive quizzes, progress tracking, and real-time communication between instructors and students via WebSocket chat rooms. Redis is used for caching frequently accessed data, improving performance and scalability. Built with a microservices architecture for scalability and performance.",
@@ -43,7 +153,6 @@ const projects: Project[] = [
       "/lovable-uploads/dacademy/payement-1.png",
       "/lovable-uploads/dacademy/payement-2.png",
       "/lovable-uploads/dacademy/verification.png"
-
     ],
     tags: [
       "Laravel (RESTful API, Middleware, JWT Auth)",
@@ -64,13 +173,129 @@ const projects: Project[] = [
     duration: "4 months",
     role: "Full Stack Developer"
   },
+  // 5. Online Pre Registration
+  {
+    id: 7,
+    title: "Online Pre-Registration Platform",
+    description: "Development of a complete solution for managing pre-registration for professional bachelor's programs. The platform allows applicants to securely create an account, submit personal and academic information, upload supporting documents, and select desired programs by priority.",
+    detailedDescription: "This online pre-registration platform streamlines the application process for professional bachelor's programs. Applicants can create secure accounts with email verification, add multiple high school diplomas and degrees, upload required documents, and select their preferred programs in order of priority. The system features a configurable candidate evaluation module for administrators, ensuring flexible and fair assessment. Built with PHP, Laravel, HTML, CSS, JavaScript, XML, and MySQL for robust performance and security.",
+    image: "/lovable-uploads/preregistration/1.png",
+    gallery: [
+      "/lovable-uploads/preregistration/2.png",
+      "/lovable-uploads/preregistration/3.png",
+      "/lovable-uploads/preregistration/4.png",
+      "/lovable-uploads/preregistration/5.png",
+      "/lovable-uploads/preregistration/7.png",
+      "/lovable-uploads/preregistration/8.png",
+      "/lovable-uploads/preregistration/9.png",
+      "/lovable-uploads/preregistration/10.png",
+      "/lovable-uploads/preregistration/11.png",
+      "/lovable-uploads/preregistration/12.png",
+      "/lovable-uploads/preregistration/13.png",
+      "/lovable-uploads/preregistration/14.png",
+      "/lovable-uploads/preregistration/15.png",
+      "/lovable-uploads/preregistration/17.png",
+      "/lovable-uploads/preregistration/18.png",
+      "/lovable-uploads/preregistration/19.png",
+      "/lovable-uploads/preregistration/20.png",
+      "/lovable-uploads/preregistration/21.png",
+      "/lovable-uploads/preregistration/22.png"
+    ],
+    tags: [
+      "PHP",
+      "Laravel",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "XML",
+      "MySQL"
+    ],
+    features: [
+      "Secure Account Creation with Email Verification",
+      "Addition of Multiple High School Diplomas and Degrees",
+      "Configurable Candidate Evaluation System",
+      "Document Uploads",
+      "Priority-based Program Selection"
+    ],
+    duration: "1 month",
+    role: "Full Stack Developer"
+  },
+  // 6. Social Network
+  {
+    id: 8,
+    title: "Social Network for Professional Bachelor's Students Powered by AI",
+    description: "Creation of a modern social network platform integrating artificial intelligence features via the Gemini API. The AI assistant helps users in their interactions, recommends personalized content, and improves engagement on the platform.",
+    detailedDescription: "This project delivers a complete social network experience for professional bachelor's students, featuring an integrated AI assistant powered by Gemini API. The assistant supports user interactions, provides personalized recommendations, and enhances engagement. The platform includes a publication and interaction system, student authentication via Firebase, personal file storage in a private cloud, and instant messaging between students. Built with Firebase for authentication and storage, HTML, CSS, JavaScript, and Gemini API for AI capabilities.",
+    image: "/lovable-uploads/socialnetwork/1.png",
+    gallery: [
+      "/lovable-uploads/socialnetwork/1.png",
+      "/lovable-uploads/socialnetwork/2.png",
+      "/lovable-uploads/socialnetwork/3.png",
+      "/lovable-uploads/socialnetwork/4.png",
+      "/lovable-uploads/socialnetwork/5.png",
+      "/lovable-uploads/socialnetwork/6.png",
+      "/lovable-uploads/socialnetwork/7.png"
+    ],
+    tags: [
+      "Firebase",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Gemini API"
+    ],
+    features: [
+      "Complete Social Network Interface",
+      "Integrated AI Assistant via Gemini API",
+      "Publication and Interaction System",
+      "Student Authentication via Firebase",
+      "Personal File Storage in Private Cloud",
+      "Instant Messaging Between Students"
+    ],
+    duration: "1 month",
+    role: "Full Stack Developer"
+  },
+  // 7. Club Management
+  {
+    id: 9,
+    title: "Sports Club Management Platform",
+    description: "A web platform for managing sports club members and handling reclamations, built with PHP (CodeIgniter), HTML, CSS, JavaScript, and MySQL.",
+    detailedDescription: "This platform is designed for sports clubs to efficiently manage their members and address reclamations. Members can register, update their profiles, and submit reclamations regarding club activities or issues. Administrators can review, track, and resolve reclamations, manage member data, and generate reports. The system features a user-friendly interface, secure authentication, and real-time status updates for reclamations. Built using PHP (CodeIgniter framework), HTML, CSS, JavaScript, and MySQL for robust data management.",
+    image: "/lovable-uploads/sportsclub/1.png",
+    gallery: [
+      "/lovable-uploads/sportsclub/1.png",
+      "/lovable-uploads/sportsclub/2.png",
+      "/lovable-uploads/sportsclub/3.png",
+      "/lovable-uploads/sportsclub/4.jpg",
+      "/lovable-uploads/sportsclub/5.jpg",
+      "/lovable-uploads/sportsclub/6.png",
+      "/lovable-uploads/sportsclub/7.png",
+      "/lovable-uploads/sportsclub/8.png"
+    ],
+    tags: [
+      "PHP (CodeIgniter)",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MySQL"
+    ],
+    features: [
+      "Member Registration & Profile Management",
+      "Reclamation Submission & Tracking",
+      "Admin Dashboard for Reclamation Handling",
+      "Real-time Status Updates",
+      "Secure Authentication"
+    ],
+    duration: "2 months",
+    role: "Full Stack Developer"
+  },
+  // 8. HR Management
   {
     id: 2,
     title: "Human Resources Management Platform",
     description: "A web platform for managing human resources for the Province of Rehamna, built with Bootstrap (responsive UI), Laravel (REST API, middleware, JWT), MySQL, and Redis cache.",
     detailedDescription: "A comprehensive HR management system designed specifically for government institutions. The platform streamlines employee management, payroll processing, leave requests, performance evaluations, and document management. Features include automated reporting, dashboard analytics, and integration with existing government databases. Laravel middleware and JWT authentication secure the API endpoints, while Redis cache accelerates dashboard analytics and reporting.",
- image: "/lovable-uploads/rh/4.png",    
- gallery: [
+    image: "/lovable-uploads/rh/4.png",    
+    gallery: [
       "/lovable-uploads/rh/1.png",
       "/lovable-uploads/rh/2.png",
       "/lovable-uploads/rh/3.png",
@@ -81,7 +306,6 @@ const projects: Project[] = [
       "/lovable-uploads/rh/9.png",
       "/lovable-uploads/rh/10.png",
       "/lovable-uploads/rh/11.png"
-
     ],
     tags: [
       "Bootstrap (Responsive Design)",
@@ -100,6 +324,7 @@ const projects: Project[] = [
     duration: "6 months",
     role: "Lead Developer"
   },
+  // 9. Dar Tifl
   {
     id: 3,
     title: "DAR-TIFL Internal Affairs Management",
@@ -144,92 +369,13 @@ const projects: Project[] = [
     duration: "5 months",
     role: "Co-Developer"
   },
-  {
-    id: 4,
-    title: "World Cup 2030 Fan ID System",
-    description: "A secure web platform for generating and verifying Fan IDs for the 2030 FIFA World Cup, integrating biometric authentication, QR code verification, JWT, Redis cache, and Spring Boot microservices.",
-    detailedDescription: "High-security digital identity platform for FIFA World Cup 2030 fan identification and verification. Features biometric enrollment, secure QR code generation, real-time verification at venues, and integration with international security databases. JWT authentication and middleware secure user sessions, Redis cache accelerates verification, and WebSocket enables real-time venue updates. Built with enterprise-grade security protocols and multi-language support.",
-    image:"/lovable-uploads/fanid/1.jpg",
-
-    gallery: [
-      "/lovable-uploads/fanid/2.jpg",
-      "/lovable-uploads/fanid/3.jpg",
-      "/lovable-uploads/fanid/4.jpg",
-      "/lovable-uploads/fanid/5.jpg",
-      "/lovable-uploads/fanid/6.jpg",
-      "/lovable-uploads/fanid/7.jpg",
-      "/lovable-uploads/fanid/8.jpg",
-      "/lovable-uploads/fanid/9.jpg",
-      "/lovable-uploads/fanid/10.jpg",
-      "/lovable-uploads/fanid/11.jpg",
-    ],
-    tags: [
-      "Next.js (SSR, TypeScript)",
-      "TypeScript (Type Safety)",
-      "Spring Boot (Microservices, JWT, Middleware)",
-      "MySQL (Relational DB)",
-      "Redis (Cache)",
-      "WebSocket (Real-time Updates)"
-    ],
-    features: [
-      "Biometric Authentication & QR Code Generation",
-      "Real-time Verification (WebSocket)",
-      "Multi-language Support",
-      "Security Integration (JWT, Middleware)",
-      "Redis Cache for Fast Verification",
-      "Microservices Architecture (Spring Boot)"
-    ],
-    duration: "8 months",
-    role: "Lead Developer"
-  },
-  {
-    id: 5,
-    title: "Interns Management Platform",
-    description: "An academic web application for managing master's students' final internships, permissions, and administrative processes. Developed by me and my partner Yahya Lemkharbech using Spring Boot (REST API, JWT, middleware), ReactJS (SPA, hooks), and MySQL.",
-    detailedDescription: "This platform streamlines the management of final internships for master's students, providing tools for internship assignment, permissions workflow, supervisor and student management, document uploads, and progress tracking. Role-based access ensures secure operations for students, supervisors, and administrators. JWT authentication and middleware secure the API, while MySQL transactions guarantee data consistency. Built as an academic project using modern technologies.",
-    image:"/lovable-uploads/stagaire/1.jpg",
-
-    gallery: [
-      "/lovable-uploads/stagaire/2.png",
-      "/lovable-uploads/stagaire/3.png",
-      "/lovable-uploads/stagaire/4.png",
-      "/lovable-uploads/stagaire/5.png",
-      "/lovable-uploads/stagaire/6.png",
-      "/lovable-uploads/stagaire/7.png",
-      "/lovable-uploads/stagaire/8.png",
-      "/lovable-uploads/stagaire/9.png",
-      "/lovable-uploads/stagaire/10.png",
-      "/lovable-uploads/stagaire/11.png",
-      "/lovable-uploads/stagaire/12.png",
-      "/lovable-uploads/stagaire/13.png",
-      "/lovable-uploads/stagaire/14.png",
-      "/lovable-uploads/stagaire/15.png",
-      "/lovable-uploads/stagaire/16.png",
-      "/lovable-uploads/stagaire/17.png"
-    ],
-    tags: [
-      "Spring Boot (REST API, JWT, Middleware)",
-      "ReactJS (SPA, Hooks, Context)",
-      "MySQL (Transactions, Relational DB)"
-    ],
-    features: [
-      "Internship Assignment & Permissions Management",
-      "Role-based Access (JWT, Middleware)",
-      "Supervisor & Student Management",
-      "Document Uploads & Progress Tracking",
-      "Secure API Endpoints",
-      "Academic Project Collaboration"
-    ],
-    duration: "2 months",
-    role: "Co-Developer (with Yahya Lemkharbech)"
-  },
+  // 10. Chatroom
   {
     id: 6,
     title: "Chat Room for Information System Master's Students",
     description: "A real-time chat room platform for master's students in information systems, built by me and my partner Yahya Lemkharbech using Spring Boot, Spring Security, WebSockets, ReactJS, and Tailwind CSS.",
     detailedDescription: "This project provides a secure and interactive chat room for master's students in information systems to communicate and collaborate. The backend is powered by Spring Boot with Spring Security for authentication and authorization, and WebSocket for real-time messaging. The frontend is built with ReactJS and styled using Tailwind CSS, offering a modern and responsive user experience. Features include user authentication, real-time messaging, and role-based access. Developed as a collaborative academic project.",
     image: "/lovable-uploads/chatroom/1.jpeg",
-
     gallery: [
       "/lovable-uploads/chatroom/2.jpeg",
       "/lovable-uploads/chatroom/3.jpeg",

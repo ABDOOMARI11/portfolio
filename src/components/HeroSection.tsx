@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 // Import des icônes React Icons
-import { FaReact, FaNodeJs, FaPython, FaPhp, FaJava, FaGitAlt, FaDocker, FaGithub } from "react-icons/fa";
-import { SiNextdotjs, SiSpring, SiLaravel, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiJavascript,SiDjango,SiSpringboot,SiMysql } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaPhp, FaJava, FaGitAlt, FaDocker, FaGithub,FaAmazon, FaCode } from "react-icons/fa";
+import { SiNextdotjs, SiSpring, SiLaravel, SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, SiJavascript,SiDjango,SiSpringboot,SiMysql,SiFirebase,SiXml,SiFigma,SiSublimetext, SiIntellijidea, SiPycharm, SiEclipseide,SiCodeberg} from "react-icons/si";
+
 
 // Données des technologies avec vraies icônes
 const technologies = [
@@ -24,7 +25,15 @@ const technologies = [
   { name: "Docker", icon: FaDocker, color: "#2496ED" },
   { name: "Git", icon: FaGitAlt, color: "#F05032" },
   { name: "GitHub", icon: FaGithub, color: "#000000" },
-  { name: "MySQL", icon: SiMysql, color: "#4479A1" }
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+  { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+  { name: "AWS", icon: FaAmazon, color: "#FF9900" },
+  { name: "XML", icon: SiXml, color: "#E44D26" },
+  { name: "Sublime Text", icon: SiSublimetext, color: "#FF9800" },
+  { name: "IntelliJ IDEA", icon: SiIntellijidea, color: "#000000" },
+  { name: "PyCharm", icon: SiPycharm, color: "#21D789" },
+  { name: "Eclipse", icon: SiEclipseide, color: "#2C2255" },
 ];
 
 // Composant TechCarousel
@@ -355,10 +364,10 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 text-gray-600 dark:text-gray-300 max-w-lg lg:max-w-none mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0"
             >
-              Passionate about creating innovative web solutions with{" "}
-              <span className="font-medium text-morocco-blue dark:text-morocco-gold">React.js</span>,{" "}
-              <span className="font-medium text-morocco-blue dark:text-morocco-gold">Django</span>,{" "}
-              <span className="font-medium text-morocco-blue dark:text-morocco-gold">Spring Boot</span>, and modern technologies.
+              I'm an Information Systems future engineer, currently working with{" "}
+              <span className="font-medium text-morocco-blue dark:text-morocco-gold">Spring Boot</span>,{" "}
+              <span className="font-medium text-morocco-blue dark:text-morocco-gold">Django</span>, and{" "}
+              <span className="font-medium text-morocco-blue dark:text-morocco-gold">React.js</span> technologies.
             </motion.p>
 
             {/* Action Buttons */}
