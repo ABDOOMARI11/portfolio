@@ -567,7 +567,7 @@ export function ProjectsSection() {
                         {/* Image indicators */}
                         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
                           {selectedProject.gallery.map((_, index) => (
-                            <button
+                            <Button
                               key={index}
                               className={`w-2 h-2 rounded-full transition-all ${
                                 index === currentImageIndex ? 'bg-white' : 'bg-white/50'
