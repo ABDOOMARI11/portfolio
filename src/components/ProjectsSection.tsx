@@ -20,6 +20,37 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 11,
+    title: "Astro Musica Membership & Session Management Platform",
+    description: "A membership-focused web platform for managing sessions, member registration, subscriptions, and institutional administration for the Astro Musica music association.",
+    detailedDescription: "This project is a polished digital platform designed for a music association to streamline member onboarding, instrument selection, chorale enrollment, and subscription management. The experience includes a multi-step registration flow, accessible account creation, and a clean administration area for managing membership, schedules, and operational workflows. The interface reflects the elegant and premium branding shown in the provided screenshots.",
+    image: "/lovable-uploads/astro-musica/1.png",
+    gallery: [
+      "/lovable-uploads/astro-musica/1.png",
+      "/lovable-uploads/astro-musica/2.png",
+      "/lovable-uploads/astro-musica/3.png",
+      "/lovable-uploads/astro-musica/4.png",
+      "/lovable-uploads/astro-musica/6.png",
+      "/lovable-uploads/astro-musica/7.png"
+    ],
+    tags: [
+      "Django",
+      "Python",
+      "MySQL",
+      "Tailwind CSS",
+      "Next js"
+    ],
+    features: [
+      "Multi-step member registration flow",
+      "Instrument and chorale selection",
+      "Subscription and membership management",
+      "Admin dashboard for schedules and operations",
+      "Elegant association-focused UI design"
+    ],
+    duration: "2 months",
+    role: "Full Stack Developer"
+  },
+  {
     id: 10,
     title: "Personal Portfolio (Old Version)",
     description: "My previous personal portfolio website built with Next.js, showcasing my projects and skills.",

@@ -6,8 +6,8 @@ export function EducationSection() {
       institution: "Faculty of Sciences Semlalia of Marrakech",
       degree: "Master's",
       field: "Information Systems Engineering",
-      period: "Ongoing",
-      status: "current"
+      period: "Oct 2024 - Jul 2026",
+      status: "completed"
     },
     {
       institution: "Higher School of Technology of Safi",

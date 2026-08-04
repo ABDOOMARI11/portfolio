@@ -127,9 +127,8 @@ export function AboutSection() {
 
                     
                     <motion.p variants={itemVariants} className="text-muted-foreground">
-                      Currently pursuing a <span className="text-foreground font-semibold">Master's degree in Information Systems Engineering</span> at 
-                      Faculté des Sciences Semlalia in Marrakech, I bridge the gap between academic knowledge 
-                      and practical industry experience.
+                      I completed a <span className="text-foreground font-semibold">Master's degree in Information Systems Engineering</span> at 
+                      Faculté des Sciences Semlalia in Marrakech in July 2026, combining solid academic foundations with hands-on industry experience.
                     </motion.p>
                     
      

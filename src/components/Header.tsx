@@ -46,9 +46,11 @@ export function Header() {
           transition={{ delay: 0.2 }}
           className="flex items-center gap-2"
         >
-          <span className="text-lg font-bold bg-gradient-to-r from-morocco-blue to-morocco-gold dark:from-morocco-gold dark:to-morocco-orange bg-clip-text text-transparent">
-            ABDELMOUGHITH
-          </span>
+          <img
+            src="/lovable-uploads/logo-symbol.svg"
+            alt="Abdelmoughith logo"
+            className="h-10 w-10 rounded-lg object-cover border border-morocco-gold/30 shadow-sm"
+          />
         </motion.div>
         
         <div className="hidden md:flex items-center gap-8">

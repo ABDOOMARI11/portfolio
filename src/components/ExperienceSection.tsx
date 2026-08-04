@@ -4,6 +4,16 @@ export function ExperienceSection() {
   const experienceData = [
     {
       company: "Confidential Company",
+      position: "Professional Internship",
+      period: "Feb 2026 - Jul 2026",
+      description:
+        "Contributed to the development of a large-scale enterprise software solution in the healthcare sector. Worked on implementing secure authentication, session management, and real-time notification features, while also improving workflows, data accuracy, and secure access for end users. Supported quality assurance by writing and executing automated tests with Selenium and Pytest to validate application behavior and strengthen reliability in a confidential environment.",
+      technologies: ["Django", "Bootstrap 5", "PostgreSQL", "Selenium", "Pytest"],
+      type: "internship",
+      duration: "6 months"
+    },
+    {
+      company: "Confidential Company",
       position: "Internship",
       period: "June 2025 - Aug 2025",
       description:
