@@ -19,6 +19,48 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+  id: 12,
+  title: "SoukCoop - B2B/B2C Cooperative Marketplace",
+  description:
+    "A digital marketplace connecting Moroccan cooperatives with B2C and B2B customers, featuring product management, inventory, orders, role-based access, and secure transactional workflows.",
+  detailedDescription:
+    "SoukCoop is a web marketplace designed to support cooperatives in the Marrakech-Safi region by digitizing their product management and connecting them with individual and professional customers. The platform provides a complete workflow for cooperative management, product publication, inventory tracking, customer registration, B2C/B2B accounts, shopping cart, cash-on-delivery orders, internal notifications, and PDF document generation. The backend follows a modular REST architecture with NestJS, Prisma, and PostgreSQL, while the frontend is built with Next.js and React. Security is handled through JWT authentication, role-based access control, DTO validation, HTTP security measures, and transactional stock management.",
+  image: "/lovable-uploads/soukcoop/1.png",
+  gallery: [
+    "/lovable-uploads/soukcoop/1.png",
+    "/lovable-uploads/soukcoop/2.png",
+    "/lovable-uploads/soukcoop/3.png",
+    "/lovable-uploads/soukcoop/5.png",
+    "/lovable-uploads/soukcoop/6.png",
+    "/lovable-uploads/soukcoop/7.png",
+    "/lovable-uploads/soukcoop/8.png",
+    "/lovable-uploads/soukcoop/9.png"
+  ],
+  tags: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Prisma",
+    "JWT",
+    "Docker"
+  ],
+  features: [
+    "B2B & B2C Marketplace",
+    "Cooperative & Product Management",
+    "Inventory & Transactional Stock Management",
+    "Role-based Access Control (RBAC)",
+    "JWT Authentication",
+    "Shopping Cart & Cash-on-Delivery Orders",
+    "Internal Notifications",
+    "PDF Document Generation",
+    "Dockerized Deployment & CI/CD"
+  ],
+  duration: "Ongoing",
+  role: "Full Stack Developer"
+},
   {
     id: 11,
     title: "Astro Musica Membership & Session Management Platform",
@@ -426,7 +468,8 @@ const projects: Project[] = [
     ],
     duration: "1 month",
     role: "Co-Developer (with Yahya Lemkharbech)"
-  }
+  },
+
 ];
 
 
