@@ -20,6 +20,43 @@ interface Project {
 
 const projects: Project[] = [
     {
+    id: 13,
+    title: "SoundCraft Pro - Acoustic Analysis & Sound Calibration",
+    description:
+      "A Progressive Web App for real-time audio analysis, acoustic measurement, feedback detection, and sound system calibration using modern Web Audio technologies.",
+    detailedDescription:
+      "SoundCraft Pro is a Progressive Web App designed to transform a web browser into a professional audio analysis and calibration tool. The application provides real-time FFT/RTA spectrum analysis, RMS and peak level monitoring, pitch detection, feedback frequency detection, and test signal generation. It is designed to assist audio operators with gain staging, microphone placement, phantom power configuration, and equalization. The application uses the Web Audio API for real-time audio processing, HTML5 Canvas/WebGL for high-performance visualization, and Service Workers for offline PWA capabilities.",
+    image: "/lovable-uploads/soundcraft/1.png",
+    gallery: [
+      "/lovable-uploads/soundcraft/1.png",
+      "/lovable-uploads/soundcraft/2.png",
+      "/lovable-uploads/soundcraft/3.png"
+    ],
+    tags: [
+      "TypeScript",
+      "JavaScript",
+      "Web Audio API",
+      "Tailwind CSS",
+      "PWA",
+      "HTML5 Canvas",
+      "WebGL"
+    ],
+    features: [
+      "Real-time FFT/RTA Spectrum Analysis",
+      "RMS and Peak Level Monitoring",
+      "Pitch and Fundamental Frequency Detection",
+      "Automatic Feedback/Larsen Detection",
+      "Pink Noise, White Noise & Sine Wave Generator",
+      "Frequency Sweep Generation",
+      "Microphone & USB Audio Interface Selection",
+      "Gain Staging & Microphone Placement Guidance",
+      "Offline Progressive Web App",
+      "Real-time Canvas/WebGL Visualization"
+    ],
+    duration: "Ongoing",
+    role: "Full Stack / Web Audio Developer"
+  },
+    {
   id: 12,
   title: "SoukCoop - B2B/B2C Cooperative Marketplace",
   description:
@@ -58,7 +95,7 @@ const projects: Project[] = [
     "PDF Document Generation",
     "Dockerized Deployment & CI/CD"
   ],
-  duration: "Ongoing",
+  duration: "1 month",
   role: "Full Stack Developer"
 },
   {
@@ -89,7 +126,7 @@ const projects: Project[] = [
       "Admin dashboard for schedules and operations",
       "Elegant association-focused UI design"
     ],
-    duration: "2 months",
+    duration: "1 month",
     role: "Full Stack Developer"
   },
   {
